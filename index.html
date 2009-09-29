@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Space-Combat</title>
+		<link rel="stylesheet" href="stylesheets/ui.css" type="text/css" media="screen" charset="utf-8"/>
+
+		<script src="javascripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="javascripts/application.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="javascripts/engine.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<ul class="ui-box ui-resources">
+			<li class="antimatter" id="antimatter" tooltip="Antymateria">
+				---
+			</li>
+			<li class="metal" id="metal" tooltip="Adamantium">
+				---
+			</li>
+			<li class="energy" id="energy" tooltip="Energia">
+				---
+			</li>
+		</ul>
+		
+		<div class="ui-box ui-events" tooltip="Kliknij aby zobaczyć wszystkie informacje">
+			<marquee scrollamount="3" behavior="scroll" id="events">
+				Aktualnie nic się nie dzieje
+			</marquee>
+			<div class="events-list"></div>
+		</div>
+		
+		<div class="ui-box ui-main" id="game_map">
+
+		</div>
+		
+		<div class="ui-box ui-main" id="badania">
+			<ul class="ui-tabs columns-4">
+				<li>
+					<a href="#tab-war" class="selected">Wojna</a>
+				</li>
+				<li>
+					<a href="#tab-defense">Obrona</a>
+				</li>
+				<li>
+					<a href="#tab-economy">Ekonomia</a>
+				</li>
+				<li>
+					<a href="#tab-exploration">Eksploracja</a>
+				</li>
+			</ul>
+			<div class="clear"></div>
+			
+			<ul class="ui-options" id="tab-war">
+				<li>
+					<a href="#">
+						<img src="images/ui/icons/plazma.png" />
+						<div class="content">
+							<h5>Plazma</h5>
+							<p class="info">Materia o stanie skupienia przypominającym gaz, złożona zarówno z cząstek obojętnych, jak i naładowanych elektrycznie, jednak jako całość - elektrycznie obojętna.</p>
+							<p class="require">
+								<span class="time">Badania: 8:00 min</span>
+								<span class="energy">2000</span>
+							</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			
+			<ul class="ui-options" id="tab-exploration">
+				<li>
+					<a href="#">
+						<img src="images/ui/icons/worp.png" />
+						<div class="content">
+							<h5>Pole Warp</h5>
+							<p class="info">Przestrzeń zagęszcza się przed statkiem i rozciąga za nim, dzięki czemu statek pokonuje ogromne odległości, nie przekraczając prędkości światła. Można to porównać do deski surfingowej generującej swoją własną falę.</p>
+							<p class="require">
+								<span class="time">Badania: 10:00 min</span>
+								<span class="antimatter">10</span>
+								<span class="energy">1000</span>
+							</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="ui-box ui-main" id="stocznia">
+			<h2>Stocznia</h2>
+			<ul class="ui-options">
+				<li>
+					<a href="#">
+						<img src="images/ui/icons/mysliwiec.png" />
+						<div class="content">
+							<h5>Myśliwiec Hydra 1 GEN</h5>
+							<p class="info">Szybki i zwrotny kosmiczny myśliwiec. Wyposażony jest w działka plasmowe oraz słabą tarczę energetyczną. Maksymalny zasięg działań 1 układ.</p>
+							<p class="require">
+								<span class="time">Budowa: 2:00 min</span>
+								<span class="antimatter">1</span>
+								<span class="metal">22</span>
+								<span class="energy">300</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/ui/icons/krazownik.png" />
+						<div class="content">
+							<h5>Krążownik Aurora 1 GEN</h5>
+							<p class="info">Powolny statek kosmiczny o dużej mocy rażenia oraz grubym pancerzu mogący pokonowyać swoim hipernapędem duże odległości.</p>
+							<p class="require">
+								<span class="time">Budowa: 5:00 min</span>
+								<span class="antimatter">10</span>
+								<span class="metal">300</span>
+								<span class="energy">1000</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/ui/icons/vega.png" />
+						<div class="content">
+							<h5>Statek kolonizacyjny Vega 1 GEN</h5>
+							<p class="info">Umożłiwia kolonizacje obcych uładów planetarnych. Dzięki swojej dużej ładowności jest w stanie przenosić całe kolonie.</p>
+							<p class="require">
+								<span class="time">Budowa: 3:00 min</span>
+								<span class="antimatter">25</span>
+								<span class="metal">180</span>
+								<span class="energy">500</span>
+							</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="ui-box ui-sidebar-top">
+			<ul class="ui-tabs">
+				<li>
+					<a href="#players" class="selected" id="players_count">Gracze(0/0)</a>
+				</li>
+				<li>
+					<a href="#process" id="process_count">Procesy</a>
+				</li>
+			</ul>
+			<div class="clear"></div>
+			<ul class="ui-list" id="process">
+				
+			</ul>
+			<ul class="ui-list" id="players">
+
+			</ul>
+		</div>
+		
+		<div class="ui-box ui-sidebar-bottom" id="chat">
+			
+		</div>
+		
+		<form class="ui-chat" id="chat_form" action="post.js">
+			<input type="text" />
+		</form>
+		
+		<ul class="ui-menu">
+			<li>
+				<a href="#flota">Flota</a>
+			</li>
+			<li>
+				<a href="#badania">Badania</a>
+			</li>
+			<li>
+				<a href="#stocznia">Stocznia</a>
+			</li>
+			<li>
+				<a href="#surowce">Surowce</a>
+			</li>
+			<li>
+				<a href="#game_map" class="selected">Mapa</a>
+			</li>
+		</ul>
+		
+		<div class="ui-box ui-latency" tooltip="Latency">
+			---
+		</div>
+		
+		<div class="ui-shadow">
+			<div class="ui-box ui-dialog">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>
