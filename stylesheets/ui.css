@@ -11,7 +11,7 @@ h1,h2,h3,h4 {
 	color: #fff ;
 }
 
-#stocznia, #process, #badania, #tab-exploration {
+#stocznia, #process, #badania, #tab-exploration, #doki {
 	display: none;
 }
 
@@ -27,6 +27,8 @@ input[type="text"] {
 	background: rgba(0,0,0,0.3);
 	color: #fff;
 }
+
+
 
 .ui-box {
 	border: 1px solid rgba(99,99,99,0.8);
@@ -160,6 +162,24 @@ input[type="text"] {
 	background-color: rgba(255,255,255,0.1);
 }
 
+#turn_time {
+	position: absolute;
+	top: 10px;
+	line-height: 16px;
+	left: 300px;
+	min-width: 50px;
+	cursor: default;
+	
+}
+
+#turn_time > .color {
+	height: 16px;
+	width: 16px;
+	float: left;
+	background: #fff;
+	margin-right: 10px;
+}
+
 .ui-resources {
 	top: 10px;
 	left: 10px;
@@ -279,6 +299,46 @@ input[type="text"] {
 	border-color: #fff;
 }
 
+.ui-icons {
+	list-style: none;
+	padding: 0;
+	display: block;
+	min-height: 60px;
+	margin-bottom: 5px;
+}
+
+.ui-icons > li {
+	float: left;
+	margin-right: 5px;
+	
+}
+
+.ui-icons > li > a {
+	display: block;
+	text-align: center;
+	padding: 5px;
+	-webkit-border-radius: 2px;
+	color: #fff;
+	height: 50px;
+	width: 50px;
+}
+
+.ui-icons > li > a > img {
+	display: block;
+	margin: 0 auto 5px auto;
+	width: 32px;
+	height: 32px;
+}
+
+.ui-icons > li > a:hover, .ui-icons > li > .selected {
+	opacity: 1.0;
+	background-color: rgba(255,255,255,0.1);
+}
+
+.ui-icons > li > a:active {
+	background-color: rgba(255,255,255,0.3);
+}
+
 .ui-options {
 	list-style: none;
 	padding: 0;
@@ -297,11 +357,16 @@ input[type="text"] {
 	display: block;
 	padding: 4px;
 	color: #fff;
+	-webkit-border-radius: 2px;
 }
 
 .ui-options > li > a:hover {
+	opacity: 1.0;
 	background-color: rgba(255,255,255,0.1);
-	-webkit-border-radius: 2px;
+}
+
+.ui-options > li > a:active {
+	background-color: rgba(255,255,255,0.3);
 }
 
 .ui-options > li > a img {
@@ -334,6 +399,11 @@ input[type="text"] {
 	background-position: left center;
 	padding: 2px 4px 2px 24px;
 	text-align: right;
+}
+
+.ui-options .inactive a {
+	opacity: 0.4;
+	cursor: wait;
 }
 
 .columns-4 li > a {

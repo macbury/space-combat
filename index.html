@@ -27,6 +27,11 @@
 			</li>
 		</ul>
 		
+		<div class="ui-box" id="turn_time" tooltip="Czas do końca tury taktycznej">
+			<div class="color"></div>
+			<span>---</span>
+		</div>
+		
 		<div class="ui-box ui-events" tooltip="Kliknij aby zobaczyć wszystkie informacje">
 			<marquee scrollamount="3" behavior="scroll" id="events">
 				Aktualnie nic się nie dzieje
@@ -34,9 +39,7 @@
 			<div class="events-list"></div>
 		</div>
 		
-		<div class="ui-box ui-main" id="game_map">
-
-		</div>
+		<div class="ui-box ui-main" id="game_map"></div>
 		
 		<div class="ui-box ui-main" id="badania">
 			<ul class="ui-tabs columns-4">
@@ -92,52 +95,16 @@
 		<div class="ui-box ui-main" id="stocznia">
 			<h2>Stocznia</h2>
 			<ul class="ui-options">
-				<li>
-					<a href="#">
-						<img src="images/ui/icons/mysliwiec.png" />
-						<div class="content">
-							<h5>Myśliwiec Hydra 1 GEN</h5>
-							<p class="info">Szybki i zwrotny kosmiczny myśliwiec. Wyposażony jest w działka plasmowe oraz słabą tarczę energetyczną. Maksymalny zasięg działań 1 układ.</p>
-							<p class="require">
-								<span class="time">Budowa: 2:00 min</span>
-								<span class="antimatter">1</span>
-								<span class="metal">22</span>
-								<span class="energy">300</span>
-							</p>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<img src="images/ui/icons/krazownik.png" />
-						<div class="content">
-							<h5>Krążownik Aurora 1 GEN</h5>
-							<p class="info">Powolny statek kosmiczny o dużej mocy rażenia oraz grubym pancerzu mogący pokonowyać swoim hipernapędem duże odległości.</p>
-							<p class="require">
-								<span class="time">Budowa: 5:00 min</span>
-								<span class="antimatter">10</span>
-								<span class="metal">300</span>
-								<span class="energy">1000</span>
-							</p>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<img src="images/ui/icons/vega.png" />
-						<div class="content">
-							<h5>Statek kolonizacyjny Vega 1 GEN</h5>
-							<p class="info">Umożłiwia kolonizacje obcych uładów planetarnych. Dzięki swojej dużej ładowności jest w stanie przenosić całe kolonie.</p>
-							<p class="require">
-								<span class="time">Budowa: 3:00 min</span>
-								<span class="antimatter">25</span>
-								<span class="metal">180</span>
-								<span class="energy">500</span>
-							</p>
-						</div>
-					</a>
-				</li>
 			</ul>
+		</div>
+		
+		<div class="ui-box ui-main" id="doki">
+			<h2>Skolonizowane układy</h2>
+			<ul class="ui-icons" id="stars">
+
+			</ul>
+			<div class="clear"></div>
+			<h2>Dostępne statki</h2>
 		</div>
 		
 		<div class="ui-box ui-sidebar-top">
@@ -168,16 +135,13 @@
 		
 		<ul class="ui-menu">
 			<li>
-				<a href="#flota">Flota</a>
+				<a href="#doki">Doki</a>
 			</li>
 			<li>
 				<a href="#badania">Badania</a>
 			</li>
 			<li>
 				<a href="#stocznia">Stocznia</a>
-			</li>
-			<li>
-				<a href="#surowce">Surowce</a>
 			</li>
 			<li>
 				<a href="#game_map" class="selected">Mapa</a>

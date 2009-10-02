@@ -8,7 +8,7 @@
 //	body: "Co robisz? Test! asdasldlkasmn asdas asdasd "
 //});
 
-engine.resources.energy += Math.round(Math.random()*100);
+engine.resources.energy += Math.round(Math.random()*20);
 engine.resources.antimatter += Math.round(Math.random()*2);
 engine.resources.metal += Math.round(Math.random()*10);
 engine.resources.process();
